@@ -312,6 +312,18 @@ public class SystemNavigationGestureSettings extends RadioButtonPickerFragment
                 .getInt(PREFS_BACK_SENSITIVITY_KEY, BACK_GESTURE_INSET_DEFAULT_OVERLAY);
     }
 
+    static int getPillToggleState(Context context) {
+        return Settings.System.getInt(context.getContentResolver(),
+                Settings.System.GESTURE_PILL_TOGGLE, 0);
+    }
+
+    static void setBackGestureOverlaysToUse(Context context) {
+        if (getPillToggleState(context) == 1)
+            BACK_GESTURE_OVERLAYS_TO_USE = BACK_GESTURE_INSET_OVERLAYS_NO_PILL;
+        else
+            BACK_GESTURE_OVERLAYS_TO_USE = BACK_GESTURE_INSET_OVERLAYS;
+    }
+
     @VisibleForTesting
     static String getCurrentSystemNavigationMode(Context context) {
         if (SystemNavigationPreferenceController.isEdgeToEdgeEnabled(context)) {
