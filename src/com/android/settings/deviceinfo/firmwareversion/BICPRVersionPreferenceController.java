@@ -25,7 +25,9 @@ import com.android.settings.core.BasePreferenceController;
 public class BICPRVersionPreferenceController extends BasePreferenceController {
 
     @VisibleForTesting
-    private static final String BICPR_VERSION_PROPERTY = "com.bicpr.version";
+    private static final String BICPR_NUM_VERSION = "com.bicpr.version";
+    private static final String BICPR_BUILD_TYPE = "com.bicpr.build_type";
+    private static final String BICPR_BUILD_DATE = "com.bicpr.build_date";
 
     public BICPRVersionPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
@@ -38,7 +40,13 @@ public class BICPRVersionPreferenceController extends BasePreferenceController {
 
     @Override
     public CharSequence getSummary() {
-        return SystemProperties.get(BICPR_VERSION_PROPERTY,
-                mContext.getString(R.string.device_info_default));
+     String bicprVer =  SystemProperties.get(BICPR_NUM_VERSION);
+     String bicprDate = SystemProperties.get(BICPR_BUILD_DATE);
+     String bicprType = SystemProperties.get(BICPR_BUILD_TYPE);
+
+      if (!bicprVer.isEmpty() && !bicprDate.isEmpty() && !bicprType.isEmpty())
+	    return bicprVer + " | " + bicprDate + " | " + bicprType;
+	else
+            return mContext.getString(R.string.unknown);
     }
 }
