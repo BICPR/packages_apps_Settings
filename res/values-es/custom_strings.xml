@@ -92,4 +92,6 @@ Es posible que las notificaciones de estas aplicaciones te lleguen con retraso."
     <string name="auto_refresh_rate">Automático</string>
     <!-- Battery light -->
     <string name="battery_light_title">Encender la luz mientras está cargando</string>
+
+    <string name="bicpr_version">Versión de BICPR</string>
 </resources>

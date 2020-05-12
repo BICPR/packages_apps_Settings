@@ -30,6 +30,14 @@
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
 
+    <!-- BICPR version -->
+    <Preference
+        android:key="bicpr_version"
+        android:title="@string/bicpr_version"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.BICPRVersionPreferenceController"/>
+
     <!-- Security patch -->
     <Preference
         android:key="security_key"
