@@ -106,4 +106,6 @@ Notifications may be delayed for these apps."</string>
     <string name="battery_light_title">Turn on the light when charging</string>
 
     <string name="bicpr_version">BICPR version</string>
+
+    <string name="specs_title">Phone Specifications</string>
 </resources>
