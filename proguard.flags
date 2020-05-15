@@ -13,6 +13,8 @@
     *;
 }
 
+-keep class com.bicpr.picker.**
+
 -keep class * extends com.android.settings.core.TogglePreferenceController {
     *;
 }

@@ -108,4 +108,8 @@ Notifications may be delayed for these apps."</string>
     <string name="bicpr_version">BICPR version</string>
 
     <string name="specs_title">Phone Specifications</string>
+
+    <!-- Picker -->
+    <string name="picker_settings_title">The Picker</string>
+    <string name="picker_settings_summary">The stuff you never asked for</string>
 </resources>

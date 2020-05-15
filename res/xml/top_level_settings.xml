@@ -134,6 +134,14 @@
         android:fragment="com.android.settings.system.SystemDashboardFragment"/>
 
     <Preference
+        android:key="top_level_picker"
+        android:title="@string/picker_settings_title"
+        android:summary="@string/picker_settings_summary"
+        android:icon="@drawable/ic_home_picker"
+        android:order="9"
+        android:fragment="com.bicpr.picker.ThePicker"/>
+
+    <Preference
         android:key="top_level_about_device"
         android:title="@string/about_settings"
         android:summary="@string/summary_placeholder"
